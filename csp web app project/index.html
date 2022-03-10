@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pet28</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<h1 id="title">pET-28a Primer Generator</h1>
+<h2 id="subtitle">gene cloning vector tool</h2>
+
+<body>
+<div id="bookmark">
+    <p><a href="#info">Jump to About pET-28a</a></p>
+</div>
+<br>
+<br>
+<img id="plasmidImg" src="/images/pet28map.png" alt="snapgene image">
+<br>
+<br>
+<div id="formspan">
+    <form class="cDNAform" id="seqForm" autocomplete="off">
+        <br><label for="cDNAinput"><strong>enter cDNA (all caps no spaces):</strong></label><br>
+        <textarea type="text" rows="6" cols="80" id="cDNAinput" name="cDNAinput"></textarea><br>
+        <label for="priLength">primer length</label><br>
+        <p>18
+        <input type="range" min="18" max="24" id="priLength" name="priLength">
+        24</p>
+        <div id="enterBtn">
+            <button type="submit" onclick="sequence();">ENTER</button>
+        </div>
+    </form>
+</div>
+
+
+
+<br>
+<p id="availcaption">available restriction enzymes:</p>
+<br>
+
+
+<button type="button" class="pairBtn" id="1-2" onclick="primer(this.id)">XhoI - EagI</button>
+<button type="button" class="pairBtn" id="1-3" onclick="primer(this.id)">XhoI - HindIII</button>
+<button type="button" class="pairBtn" id="1-4" onclick="primer(this.id)">XhoI - SalI</button>
+<button type="button" class="pairBtn" id="1-5" onclick="primer(this.id)">XhoI - Eco53kI</button>
+<button type="button" class="pairBtn" id="1-6" onclick="primer(this.id)">XhoI - SacI</button>
+<button type="button" class="pairBtn" id="1-7" onclick="primer(this.id)">XhoI - EcoRI</button>
+<button type="button" class="pairBtn" id="1-8" onclick="primer(this.id)">XhoI - BamHI</button>
+<button type="button" class="pairBtn" id="2-3" onclick="primer(this.id)">EagI - HindIII</button>
+<button type="button" class="pairBtn" id="2-4" onclick="primer(this.id)">EagI - SalI</button>
+<button type="button" class="pairBtn" id="2-5" onclick="primer(this.id)">EagI - Eco53kI</button>
+<button type="button" class="pairBtn" id="2-6" onclick="primer(this.id)">EagI - SacI</button>
+<button type="button" class="pairBtn" id="2-7" onclick="primer(this.id)">EagI - EcoRI</button>
+<button type="button" class="pairBtn" id="2-8" onclick="primer(this.id)">EagI - BamHI</button>
+<button type="button" class="pairBtn" id="3-4" onclick="primer(this.id)">HindIII - SalI</button>
+<button type="button" class="pairBtn" id="3-5" onclick="primer(this.id)">HindIII - Eco53kI</button>
+<button type="button" class="pairBtn" id="3-6" onclick="primer(this.id)">HindIII - SacI</button>
+<button type="button" class="pairBtn" id="3-7" onclick="primer(this.id)">HindIII - EcoRI</button>
+<button type="button" class="pairBtn" id="3-8" onclick="primer(this.id)">HindIII - BamHI</button>
+<button type="button" class="pairBtn" id="4-5" onclick="primer(this.id)">SalI - Eco53kI</button>
+<button type="button" class="pairBtn" id="4-6" onclick="primer(this.id)">SalI - SacI</button>
+<button type="button" class="pairBtn" id="4-7" onclick="primer(this.id)">SalI - EcoRI</button>
+<button type="button" class="pairBtn" id="4-8" onclick="primer(this.id)">SalI - BamHI</button>
+<button type="button" class="pairBtn" id="5-6" onclick="primer(this.id)">Eco53kI - SacI</button>
+<button type="button" class="pairBtn" id="5-7" onclick="primer(this.id)">Eco53kI - EcoRI</button>
+<button type="button" class="pairBtn" id="5-8" onclick="primer(this.id)">Eco53kI - BamHI</button>
+<button type="button" class="pairBtn" id="6-7" onclick="primer(this.id)">SacI - EcoRI</button>
+<button type="button" class="pairBtn" id="6-8" onclick="primer(this.id)">SacI - BamHI</button>
+<button type="button" class="pairBtn" id="7-8" onclick="primer(this.id)">EcoRI - BamHI</button>
+<br>
+<br>
+<br>
+<div id="primerspan">
+    <p class="primers" id="forw">Forward Primer:</p>
+    <p class="primers" id="reve">Reverse Primer:</p>
+</div>
+
+
+
+
+<div id="info">
+    <h2>About pET-28a</h2>
+    <p>blah blah blah</p>
+</div>
+<script src="theThing.js"></script>
+</body>
+</html>
